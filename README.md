@@ -31,10 +31,10 @@
   </tr>
   <tr>
     <td>
-      <a href="https://sm.ms/image/Xalombdk5fwExUp" target="_blank"><img src="https://i.loli.net/2020/02/13/Xalombdk5fwExUp.jpg" ></a>
+      <a href="https://sm.ms/image/Xalombdk5fwExUp" target="_blank"><img src="https://i.loli.net/2020/02/13/Xalombdk5fwExUp.jpg" width="95%" ></a>
     </td>
     <td>
-      <a href="https://sm.ms/image/vXN3CWSHBslxJpK" target="_blank"><img src="https://i.loli.net/2020/02/13/vXN3CWSHBslxJpK.jpg" ></a>
+      <a href="https://sm.ms/image/vXN3CWSHBslxJpK" target="_blank"><img src="https://i.loli.net/2020/02/13/vXN3CWSHBslxJpK.jpg" width="95%" ></a>
     </td>
   </tr>
 </table>
@@ -51,17 +51,36 @@
   </tr>
   <tr>
     <td>
-      <a href="https://sm.ms/image/2eOzaVmf68bn3Xg" target="_blank"><img src="https://i.loli.net/2020/02/13/2eOzaVmf68bn3Xg.jpg" ></a>
+      <a href="https://sm.ms/image/2eOzaVmf68bn3Xg" target="_blank"><img src="https://i.loli.net/2020/02/13/2eOzaVmf68bn3Xg.jpg" width="95%" ></a>
     </td>
     <td>
-      <a href="https://sm.ms/image/81wdClvXtZ5iNeI" target="_blank"><img src="https://i.loli.net/2020/02/13/81wdClvXtZ5iNeI.jpg" ></a>
+      <a href="https://sm.ms/image/81wdClvXtZ5iNeI" target="_blank"><img src="https://i.loli.net/2020/02/13/81wdClvXtZ5iNeI.jpg" width="95%" ></a>
     </td>
   </tr>
 </table>
 
 ## 使用方法
 
-配合浏览器扩展 Tampermonkey 使用。详细请自行 Google.
+- 首先，你需要在浏览器上安装一个用户脚本管理器。可选的扩展有
+  - [Tampermonkey for Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)
+  - [Violentmonkey for Firefox](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
+  - [Greasemonkey for Firefox](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
+  - [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+  - [Violentmonkey for Chrome](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
+
+- 然后，从下面途径之一安装:
+  - [Install from GreasyFork](https://greasyfork.org/zh-CN/scripts/396387-rain-classroom-helper)
+  - [Install from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js)
+
+安装完成并启用后，无需配置即可使用。
+
+## 已知问题
+
+很少的情况下（多为初次加载时）提取视频到右侧不能工作。此时请刷新重试，一般问题能够解决。
+
+## Credit
+
+本项目使用了 BrockA 编写的 utility function: [waitForKeyElement](https://gist.githubusercontent.com/BrockA/2625891)
 
 ## LICENSE
-[MIT](LICENSE)
+[MIT](LICENSE).
