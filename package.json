@@ -1,0 +1,13 @@
+{
+  "name": "rain-classroom-helper",
+  "version": "0.1.0",
+  "description": "Make rain classroom easier to use on PCs & tablets",
+  "scripts": {
+    "test": "eslint *.js"
+  },
+  "author": "RainEggplant",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "6.8.0"
+  }
+}
