@@ -31,10 +31,10 @@
   </tr>
   <tr>
     <td>
-      <a href="https://sm.ms/image/Xalombdk5fwExUp" target="_blank"><img src="https://i.loli.net/2020/02/13/Xalombdk5fwExUp.jpg" width="95%" ></a>
+      <a href="https://sm.ms/image/KDiEYV4MIX7cC1F" target="_blank"><img src="https://i.loli.net/2020/02/13/KDiEYV4MIX7cC1F.jpg" width="95%" ></a>
     </td>
     <td>
-      <a href="https://sm.ms/image/vXN3CWSHBslxJpK" target="_blank"><img src="https://i.loli.net/2020/02/13/vXN3CWSHBslxJpK.jpg" width="95%" ></a>
+      <a href="https://sm.ms/image/rcVSQDbFhNRmisW" target="_blank"><img src="https://i.loli.net/2020/02/13/rcVSQDbFhNRmisW.jpg" width="95%" ></a>
     </td>
   </tr>
 </table>

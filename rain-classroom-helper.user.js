@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rain Classroom Helper
 // @namespace    https://raineggplant.com/
-// @version      0.1
+// @version      0.1.0
 // @description  优化雨课堂使用体验
 // @author       RainEggplant
 // @match        *://www.yuketang.cn/web*
@@ -258,14 +258,10 @@
       //--- Set a timer, if needed.
       if (!timeControl) {
         timeControl = setInterval(function () {
-          waitForKeyElements(selectorTxt,
-            actionFunction,
-            bWaitOnce,
-            iframeSelector
+          waitForKeyElements(
+            selectorTxt, actionFunction, bWaitOnce, iframeSelector
           );
-        },
-        300
-        );
+        }, 300);
         controlObj[controlKey] = timeControl;
       }
     }
