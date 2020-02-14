@@ -1,5 +1,7 @@
 # Rain Classroom Helper
 
+<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/RainEggplant/rain-classroom-helper">
+
 该用户脚本旨在为大屏幕设备（PC、平板）提供更好的雨课堂学生端使用体验。
 
 ## 介绍

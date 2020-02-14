@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rain Classroom Helper
 // @namespace    https://raineggplant.com/
-// @version      0.1.0
+// @version      0.1.1
 // @description  优化雨课堂使用体验
 // @author       RainEggplant
 // @match        *://www.yuketang.cn/web*
@@ -116,7 +116,7 @@
   waitForKeyElements('ul.nav-list', function () {
     const liAbout = `
       <li class="nav-item clearfix J_nav">
-        <a href="https://github.com/RainEggplant" target="_blank">
+        <a href="https://github.com/RainEggplant/rain-classroom-helper" target="_blank">
           <img alt="GitHub stars" style="width:auto;" src="https://img.shields.io/github/stars/RainEggplant/rain-classroom-helper?style=social">
         </a>
       </li>
