@@ -155,6 +155,11 @@
         const videoIFrame = $('#video-iframe')[0];
         videoIFrame.contentWindow.location.replace(iframeUrl);
         $('#video-iframe').css({ display: 'block' });
+        waitForKeyElements('.live__view', function () {
+          const liveView = $('#video-iframe').contents().find('.live__view');
+          liveView.children(':not(.live__wrap)').remove();
+          liveView.css({ 'padding-top': '0px' });
+        }, true, '#video-iframe');
 
         isVideoLoaded = true;
       } else {
