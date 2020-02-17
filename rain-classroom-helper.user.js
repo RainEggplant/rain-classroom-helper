@@ -4,7 +4,8 @@
 // @version      0.1.1
 // @description  优化雨课堂使用体验
 // @author       RainEggplant
-// @match        *.yuketang.cn/web*
+// @match        *://www.yuketang.cn/web*
+// @match        *://pro.yuketang.cn/web*
 // @grant        GM_addStyle
 // @require      https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
 // @updateURL    https://raw.githubusercontent.com/RainEggplant/rain-classroom-helper/master/rain-classroom-helper.user.js
