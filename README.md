@@ -1,6 +1,7 @@
 # Rain Classroom Helper
 
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/RainEggplant/rain-classroom-helper">
+<a href="https://github.com/RainEggplant/rain-classroom-helper/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/RainEggplant/rain-classroom-helper"></a>
 
 该用户脚本旨在为大屏幕设备（PC、平板）提供更好的雨课堂学生端使用体验。
 
@@ -72,13 +73,9 @@
 
 - 然后，从下面途径之一安装:
   - [Install from GreasyFork](https://greasyfork.org/zh-CN/scripts/396387-rain-classroom-helper)
-  - [Install from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js)
+  - [Install from GitHub](https://raw.githubusercontent.com/RainEggplant/rain-classroom-helper/master/rain-classroom-helper.user.js)
 
 安装完成并启用后，无需配置即可使用。
-
-## 已知问题
-
-很少的情况下（多为初次加载时）提取视频到右侧不能工作。此时请刷新重试，一般问题能够解决。
 
 ## Credit
 

@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Rain Classroom Helper
 // @namespace    https://raineggplant.com/
-// @version      0.1.1
+// @version      0.2.0-beta
 // @description  优化雨课堂使用体验
 // @author       RainEggplant
-// @match        *://www.yuketang.cn/web*
-// @match        *://pro.yuketang.cn/web*
+// @match        *://www.yuketang.cn/web?index*
+// @match        *://pro.yuketang.cn/web?index*
 // @grant        GM_addStyle
 // @require      https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
 // @updateURL    https://raw.githubusercontent.com/RainEggplant/rain-classroom-helper/master/rain-classroom-helper.user.js
@@ -40,7 +40,7 @@
   // 调整右边栏样式
   GM_addStyle(`
     .right {
-      width: 300px !important;
+      width: 320px !important;
     }
     .control-panel {
       padding-top: 32px !important;
@@ -49,7 +49,7 @@
       font-size: 22px !important;
     }
     .page-nav-control {
-      width: 300px !important;
+      width: 320px !important;
     }
     .page-control {
       padding-top: 15px !important;
@@ -72,16 +72,19 @@
   // 调整中间 iframe 为自适应宽度
   GM_addStyle(`
     .wrapper-inner {
-      width: 92% !important;
+      width: 95% !important;
     }
     .center {
       width: auto !important;
       margin-left: 180px !important;
-      margin-right: 300px !important;
+      margin-right: 320px !important;
       float: none !important;
     }
     .rain-iframe {
-      width: calc(100% - 50px) !important;
+      width: calc(95% - 40px) !important;
+    }
+    .student__timeline-wrapper {
+      top: 2.33rem !important;
     }
   `);
 
@@ -102,8 +105,8 @@
   // 添加右边栏视频框
   GM_addStyle(`
     #video-iframe {
-      width: 300px;
-      height: 285px;
+      width: 320px;
+      height: 304px;
       margin-top: 20px;
     }
   `);
@@ -125,29 +128,32 @@
     $('ul.nav-list').append(liAbout);
   });
 
-  // 中间 iframe 加载出内容后绑定处理视频的函数
-  waitForKeyElements('body', addVideoHandler, true, '#rainiframe');
+  waitForKeyElements('body', function () {
+    // 中间 iframe 加载出内容后绑定处理视频的函数
+    addVideoHandler();
+  }, true, '#rainiframe');
 
-  // 启动将课件中视频提到右边栏播放的处理函数
-  function startObservation() {
-    const rainIFrame = document.getElementById('rainiframe').contentWindow
-      .document.body;
+  function addVideoHandler() {
+    // 首次进入或通过左边栏改变页面时
     let iframeUrl = '';
     let isVideoLoaded = false;
+    let iframeBody = $('#rainiframe').contents().find('body')[0];
+    const iframeObserver = new MutationObserver(function () {
+      DEBUG && console.log('iframe mutated');
+      const newIFrameUrl = $('#rainiframe').contents()[0].location.href;
+      DEBUG && console.log(newIFrameUrl);
 
-    const observer = new MutationObserver(function () {
-      // change in #rainiframe detected
-      DEBUG && console.log('change in #rainiframe detected');
-      const newIFrameUrl = $('#rainiframe').contents().get(0).location.href;
-      const videoSection = rainIFrame.querySelector('section.live__wrap');
+      const videoSection = iframeBody.querySelector('section.live__wrap');
       if (videoSection) {
         // 存在视频
         // 去除中央 rainIFrame 中的视频
-        $(videoSection).attr('style', 'display: none;');
         $(videoSection).contents().find('video').removeAttr('src');
         $(videoSection).empty();
 
-        if (newIFrameUrl === iframeUrl) return;
+        if (iframeUrl && newIFrameUrl.includes(iframeUrl)) {
+          DEBUG && console.log('entering a sub page');
+          return;
+        }
 
         // 在右边栏显示视频
         // note: 不要使用 $("#video-iframe").attr("src", iframeUrl);
@@ -157,9 +163,23 @@
         videoIFrame.contentWindow.location.replace(iframeUrl);
         $('#video-iframe').css({ display: 'block' });
 
+        // 去除视频框中无关元素
+        waitForKeyElements('.live__view', function () {
+          const liveView = $('#video-iframe').contents().find('.live__view');
+          liveView.children(':not(.live__wrap)').remove();
+          const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+              if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                liveView.children(':not(.live__wrap)').remove();
+              }
+            });
+          });
+          observer.observe(liveView[0], { childList: true });
+        }, true, '#video-iframe');
+
         isVideoLoaded = true;
       } else {
-        if (isVideoLoaded) {
+        if (isVideoLoaded && !(iframeUrl && newIFrameUrl.includes(iframeUrl))) {
           // 退出视频课程时停止播放并隐藏右边栏视频
           $('#video-iframe').css({ display: 'none' });
           iframeUrl = newIFrameUrl;
@@ -173,20 +193,18 @@
     });
 
     const config = { childList: true, subtree: true };
-    observer.observe(rainIFrame, config);
-    DEBUG && console.log('Observation started');
-  }
+    iframeObserver.observe(iframeBody, config);
 
-  function addVideoHandler() {
-    // 首次进入或通过左边栏改变页面时
-    $('#rainiframe').on('load', function () {
+    // 在 iframe 被重新加载（点击左侧导航栏、进入直播）时，重新添加 handler
+    $('#rainiframe')[0].contentWindow.addEventListener('unload', () => {
       DEBUG && console.log('#rainiframe has (re)loaded');
       // 右边栏视频停止播放并隐藏
       $('#video-iframe').css({ display: 'none' });
       const videoIFrame = $('#video-iframe')[0];
       videoIFrame.contentWindow.location.replace('about:blank');
-
-      startObservation();
+      waitForKeyElements('body', function () {
+        addVideoHandler();
+      }, true, '#rainiframe');
     });
   }
 
