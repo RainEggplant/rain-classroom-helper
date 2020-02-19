@@ -1,7 +1,6 @@
 # Rain Classroom Helper
 
-<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/RainEggplant/rain-classroom-helper">
-<a href="https://github.com/RainEggplant/rain-classroom-helper/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/RainEggplant/rain-classroom-helper"></a>
+<p><a href="https://github.com/RainEggplant/rain-classroom-helper" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/RainEggplant/rain-classroom-helper?style=social"></a> <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/RainEggplant/rain-classroom-helper"> <a href="https://github.com/RainEggplant/rain-classroom-helper/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/RainEggplant/rain-classroom-helper"></a></p>
 
 该用户脚本旨在为大屏幕设备（PC、平板）提供更好的雨课堂学生端使用体验。
 
