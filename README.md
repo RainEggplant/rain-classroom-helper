@@ -94,11 +94,14 @@
   - [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
   - [Violentmonkey for Chrome](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
 
+  国内 Chrome 用户安装插件可能会遇到网络问题，可以参考 [这篇文章](https://zhuanlan.zhihu.com/p/80305764)。
+
 - 然后，从下面途径之一安装:
   - [Install from GreasyFork （推荐）](https://greasyfork.org/zh-CN/scripts/396387-rain-classroom-helper)
   - [Install from GitHub](https://raw.githubusercontent.com/RainEggplant/rain-classroom-helper/master/rain-classroom-helper.user.js)
 
-安装完成并启用后，无需配置即可使用。
+- 安装完成并启用后，无需配置即可使用。
+
 
 ## 更新记录
 
