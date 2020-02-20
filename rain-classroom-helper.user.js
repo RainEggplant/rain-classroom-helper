@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Rain Classroom Helper
 // @namespace    https://raineggplant.com/
-// @version      0.2.1
+// @version      0.2.2
 // @description  优化雨课堂使用体验
 // @author       RainEggplant
-// @match        *://www.yuketang.cn/web?index*
-// @match        *://pro.yuketang.cn/web?index*
+// @match        *://www.yuketang.cn/web*
+// @match        *://pro.yuketang.cn/web*
 // @grant        GM_addStyle
 // @require      https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
 // @updateURL    https://raw.githubusercontent.com/RainEggplant/rain-classroom-helper/master/rain-classroom-helper.user.js
