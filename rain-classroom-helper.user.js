@@ -274,9 +274,10 @@
       $('#video-iframe').css({ display: 'none' });
       const videoIFrame = $('#video-iframe')[0];
       videoIFrame.contentWindow.location.replace('about:blank');
+      $('#rainiframe').contents().empty();
       waitForKeyElements('body', function () {
         addVideoHandler();
-      }, false, '#rainiframe');
+      }, true, '#rainiframe');
     });
   }
 
