@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rain Classroom Helper
 // @namespace    https://raineggplant.com/
-// @version      0.2.2
+// @version      0.2.3
 // @description  优化雨课堂使用体验
 // @author       RainEggplant
 // @match        *://www.yuketang.cn/web*
@@ -71,6 +71,9 @@
     .contact-us {
       display: none;
     }
+    .right .control-panel .page-control .paging-number-list .page-no:nth-child(5n) {
+      margin: 0 14px 13px 0 !important;
+     }
   `);
 
   // 调整中间 iframe 为自适应宽度
@@ -237,6 +240,7 @@
         // 去除视频框中无关元素
         waitForKeyElements('.live__view', function () {
           const liveView = $('#video-iframe').contents().find('.live__view');
+          // liveView.children('section.live__wrap').css('padding-top', '0px');
           liveView.children(':not(.live__wrap)').remove();
           const observer = new MutationObserver(function (mutations) {
             mutations.forEach(function (mutation) {
