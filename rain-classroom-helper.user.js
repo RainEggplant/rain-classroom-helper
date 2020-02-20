@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rain Classroom Helper
 // @namespace    https://raineggplant.com/
-// @version      0.2.0
+// @version      0.2.1
 // @description  优化雨课堂使用体验
 // @author       RainEggplant
 // @match        *://www.yuketang.cn/web?index*
@@ -265,6 +265,7 @@
 
     const config = { childList: true, subtree: true };
     iframeObserver.observe(iframeBody, config);
+    DEBUG && console.log('observation started');
 
     // 在 iframe 被重新加载（点击左侧导航栏、进入直播）时，重新添加 handler
     $('#rainiframe')[0].contentWindow.addEventListener('unload', () => {
@@ -275,7 +276,7 @@
       videoIFrame.contentWindow.location.replace('about:blank');
       waitForKeyElements('body', function () {
         addVideoHandler();
-      }, true, '#rainiframe');
+      }, false, '#rainiframe');
     });
   }
 
