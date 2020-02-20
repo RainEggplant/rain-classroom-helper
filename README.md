@@ -94,11 +94,13 @@
   - [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
   - [Violentmonkey for Chrome](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
 
-  国内 Chrome 用户安装插件可能会遇到网络问题，可以参考 [这篇文章](https://zhuanlan.zhihu.com/p/80305764)。
+  Chromium 内核的浏览器（Edge, Opera 以及 360、搜狗等国产浏览器）可以安装 Chrome 版的扩展，或者在对应的应用商店中搜索以上扩展安装。
+  
+  国内 Chrome 用户安装插件可能会遇到网络问题，可以参考 [这篇文章](https://zhuanlan.zhihu.com/p/80305764)。通过开发者模式安装的扩展会提示错误，忽略即可。
 
 - 然后，从下面途径之一安装:
-  - [Install from GreasyFork （推荐）](https://greasyfork.org/zh-CN/scripts/396387-rain-classroom-helper)
-  - [Install from GitHub](https://github.com/RainEggplant/rain-classroom-helper/releases/latest/download/rain-classroom-helper.user.js)
+  - [Install from GreasyFork 【推荐】](https://greasyfork.org/zh-CN/scripts/396387-rain-classroom-helper)（载入后点击网页上的安装按钮）
+  - [Install from GitHub](https://github.com/RainEggplant/rain-classroom-helper/releases/latest/download/rain-classroom-helper.user.js) （点击即自动安装）
 
 - 安装完成并启用后，无需配置即可使用。
 
