@@ -1,6 +1,6 @@
 # Rain Classroom Helper
 
-<p><a href="https://github.com/RainEggplant/rain-classroom-helper" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/RainEggplant/rain-classroom-helper?style=social"></a> <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/RainEggplant/rain-classroom-helper"> <a href="https://github.com/RainEggplant/rain-classroom-helper/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/RainEggplant/rain-classroom-helper"></a></p>
+<p><a href="https://github.com/RainEggplant/rain-classroom-helper" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/RainEggplant/rain-classroom-helper?style=social"></a> <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/RainEggplant/rain-classroom-helper?include_prereleases"> <a href="https://github.com/RainEggplant/rain-classroom-helper/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/RainEggplant/rain-classroom-helper"></a></p>
 
 该用户脚本旨在为大屏幕设备（PC、平板）提供更好的雨课堂学生端使用体验。
 
@@ -98,7 +98,7 @@
 
 - 然后，从下面途径之一安装:
   - [Install from GreasyFork （推荐）](https://greasyfork.org/zh-CN/scripts/396387-rain-classroom-helper)
-  - [Install from GitHub](https://raw.githubusercontent.com/RainEggplant/rain-classroom-helper/master/rain-classroom-helper.user.js)
+  - [Install from GitHub](https://github.com/RainEggplant/rain-classroom-helper/releases/latest/download/rain-classroom-helper.user.js)
 
 - 安装完成并启用后，无需配置即可使用。
 
@@ -106,7 +106,7 @@
 ## 更新记录
 
 ### v0.2.3
-- 修正了雨课堂右边栏本身列表项样式错误的问题 (#8)
+- 修正了雨课堂右边栏本身列表项样式错误的问题
 
 ### v0.2.2
 

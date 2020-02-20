@@ -1,6 +1,5 @@
 {
   "name": "rain-classroom-helper",
-  "version": "0.2.3",
   "description": "Make rain classroom easier to use on PCs & tablets",
   "scripts": {
     "test": "eslint *.js"
