@@ -90,10 +90,11 @@
 - 首先，你需要在浏览器上安装一个用户脚本管理器。可选的扩展有
   - [Tampermonkey for Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)
   - [Violentmonkey for Firefox](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
-  - [Greasemonkey for Firefox](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
   - [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
   - [Violentmonkey for Chrome](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
 
+  注意 **不支持** Greasemonkey。
+  
   Chromium 内核的浏览器（Edge, Opera 以及 360、搜狗等国产浏览器）可以安装 Chrome 版的扩展，或者在对应的应用商店中搜索以上扩展安装。
   
   国内 Chrome 用户安装插件可能会遇到网络问题，可以参考 [这篇文章](https://zhuanlan.zhihu.com/p/80305764)。通过开发者模式安装的扩展会提示错误，忽略即可。
