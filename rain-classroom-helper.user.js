@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Rain Classroom Helper
 // @namespace    https://raineggplant.com/
-// @version      0.2.3
+// @version      0.2.4
 // @description  优化雨课堂使用体验
 // @author       RainEggplant
 // @match        *://www.yuketang.cn/web*
 // @match        *://pro.yuketang.cn/web*
+// @match        *://changjiang.yuketang.cn/web*
 // @grant        GM_addStyle
 // @require      https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
 // @updateURL    https://raw.githubusercontent.com/RainEggplant/rain-classroom-helper/master/rain-classroom-helper.user.js
@@ -19,18 +20,23 @@
 
   // 调整左边栏样式
   GM_addStyle(`
-    .panel {
+    .left .panel {
       padding-top: 34px !important;
+      max-height: unset !important;
     }
     .nav-list {
       font-size: 18px !important;
     }
     .nav-item {
-      height: 50px !important;
+      height: 45px !important;
       line-height: 32px !important;
+      padding-top: 6px !important;
     }
     .kecheng, .kejian, .shiti, .geren, .addlink {
-      width: 32px !important;
+      width: 30px !important;
+    }
+    .left .panel .nav-list .nav-item .name {
+      padding-left: 18px !important;
     }
     .left .contact-us {
       bottom: 10px !important;
@@ -43,8 +49,9 @@
     .right {
       width: 320px !important;
     }
-    .control-panel {
+    .right .control-panel {
       padding-top: 32px !important;
+      max-height: unset !important;
     }
     .title {
       font-size: 22px !important;
@@ -61,9 +68,6 @@
     .page-nav {
       padding: unset !important;
       font-size: 18px !important;
-    }
-    .kecheng, .kejian, .shiti, .geren, .addlink {
-      width: 32px !important;
     }
     .print-preview-box {
       margin: 0px 0 0 !important;
@@ -87,8 +91,9 @@
       margin-right: 320px !important;
       float: none !important;
     }
-    .rain-iframe {
+    .center .rain-iframe {
       width: calc(95% - 40px) !important;
+      height: 95% !important;
     }
     .student__timeline-wrapper {
       top: 2.33rem !important;
