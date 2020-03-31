@@ -40,7 +40,7 @@
     }
     .left .contact-us {
       bottom: 10px !important;
-      display: block !important;
+      //display: block !important;
     }
   `);
 
