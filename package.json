@@ -6,7 +6,7 @@
   },
   "author": "RainEggplant",
   "license": "MIT",
-  "devDependencies": {
-    "eslint": "6.8.0"
+  "dependencies": {
+    "eslint": "^7.3.1"
   }
 }
