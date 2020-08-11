@@ -38,10 +38,6 @@
     .left .panel .nav-list .nav-item .name {
       padding-left: 18px !important;
     }
-    .left .contact-us {
-      bottom: 10px !important;
-      //display: block !important;
-    }
   `);
 
   // 调整右边栏样式
